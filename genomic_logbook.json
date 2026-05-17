@@ -469,7 +469,7 @@
       "title": "FST & DXY estimation - Pixy",
       "tool": "Pixy",
       "output_dir": "anoa_analysis/pixy",
-      "status": "running",
+      "status": "completed",
       "notes": "Population genomics analysis (FST-within & DXY-among)",
       "tags": [
         "Genetic distance"
@@ -486,6 +486,36 @@
       "mem": "32G",
       "walltime": "12:00:00",
       "input_files": "anoa_analysis/vcf_denovo/raw_variants.vcf.gz \nanoa_analysis/pixy/popmap.txt",
+      "ref_genome": "btau9",
+      "results": "finished within 5h, output downloaded to local for visualisation"
+    },
+    {
+      "id": 19,
+      "timestamp": "2026-05-18T05:28:19",
+      "date": "2026-05-18",
+      "analyst": "qonitahanifa",
+      "title": "Refilter VCF for IQ-TREE - bcftools filter",
+      "tool": "bcftools filter",
+      "output_dir": "anoa_analysis/filtered",
+      "status": "running",
+      "notes": "Filtering raw_variants for 12 anoa + 1 outgroup for phylogeny",
+      "tags": [
+        "SNP Phylogeny",
+        "Paper_1",
+        "filtering"
+      ],
+      "project": "anoa_wgs",
+      "sample_ids": [],
+      "organism": "BDBQ",
+      "tool_version": "1.23",
+      "script": "anoa_analysis/scripts/refilter_iqtree.sh",
+      "command": "bcftools view \\\n    -m2 -M2 \\\n    -v snps \\\n    -O u \\\n    $VCF_DIR/raw_variants_with_outgroup.vcf.gz | \\\nbcftools +fill-tags \\\n    -O u -- -t MAF,F_MISSING | \\\nbcftools filter \\\n    -e 'MAF<0.05 || F_MISSING>0.05 || AC==0 || AC==AN || MIN(GQ)<20' \\\n    -O z \\\n    --threads 8 \\\n    -o $OUT/filtered_snps_with_outgroup.vcf.gz",
+      "job_id": "bcftools index -t $OUT/filtered_snps_with_outgroup.vcf.gz 482959",
+      "cluster": "trembesi70",
+      "cpus": "8",
+      "mem": "16G",
+      "walltime": "04:00:00",
+      "input_files": "anoa_analysis/vcf_denovo/raw_variants_with_outgroup.vcf.gz",
       "ref_genome": "btau9",
       "results": ""
     }
@@ -543,8 +573,8 @@
       "priority": "medium",
       "due": "2026-05-17",
       "ref_id": "16",
-      "done": false,
-      "done_at": null
+      "done": true,
+      "done_at": "2026-05-18T05:37:37"
     },
     {
       "id": 6,
