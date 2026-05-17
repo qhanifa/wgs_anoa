@@ -460,6 +460,34 @@
       "input_files": "anoa_analysis/vep/annotated_variants.vcf.gz ",
       "ref_genome": "btau9",
       "results": "actually completed but output had to be deleted due to insufficient root storage (63 GB)"
+    },
+    {
+      "id": 18,
+      "timestamp": "2026-05-17T22:38:48",
+      "date": "2026-05-17",
+      "analyst": "qonitahanifa",
+      "title": "FST & DXY estimation - Pixy",
+      "tool": "Pixy",
+      "output_dir": "anoa_analysis/pixy",
+      "status": "running",
+      "notes": "Population genomics analysis (FST-within & DXY-among)",
+      "tags": [
+        "Genetic distance"
+      ],
+      "project": "anoa_wgs",
+      "sample_ids": [],
+      "organism": "BDBQ",
+      "tool_version": "2.00",
+      "script": "anoa_analysis/scripts/pixy.sh",
+      "command": "pixy --stats fst dxy pi \\\n    --vcf $VCF_DIR/raw_variants.vcf.gz \\\n    --populations $OUT/popmap.txt \\\n    --window_size 10000 \\\n    --output_folder $OUT \\\n    --output_prefix anoa_pixy \\\n    --n_cores 8",
+      "job_id": "482959",
+      "cluster": "trembesi53",
+      "cpus": "8",
+      "mem": "32G",
+      "walltime": "12:00:00",
+      "input_files": "anoa_analysis/vcf_denovo/raw_variants.vcf.gz \nanoa_analysis/pixy/popmap.txt",
+      "ref_genome": "btau9",
+      "results": ""
     }
   ],
   "todos": [
