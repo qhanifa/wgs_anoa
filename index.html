@@ -236,7 +236,7 @@ body { font-family: var(--sans); font-size: 14px; background: var(--bg); color: 
 
 <script>
 // Auto-load genomic_logbook.json from the same folder if available
-fetch('genomic_logbook.json')
+fetch('genomic_logbook.json?v=' + Date.now())
   .then(r => { if (!r.ok) throw new Error('not found'); return r.json(); })
   .then(data => loadData(data, 'genomic_logbook.json'))
   .catch(() => {}); // silently fall back to drop zone if not found
