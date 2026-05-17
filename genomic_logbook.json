@@ -499,8 +499,8 @@
       "priority": "high",
       "due": "2026-05-17",
       "ref_id": "9",
-      "done": false,
-      "done_at": null
+      "done": true,
+      "done_at": "2026-05-17T22:46:28"
     },
     {
       "id": 2,
