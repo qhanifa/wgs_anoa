@@ -619,6 +619,17 @@
       "ref_id": "17",
       "done": false,
       "done_at": null
+    },
+    {
+      "id": 10,
+      "created": "2026-05-18T05:38:29",
+      "task": "FST-DXY Manhattan plot visualisation",
+      "category": "follow-up",
+      "priority": "medium",
+      "due": "2026-05-18",
+      "ref_id": "18",
+      "done": false,
+      "done_at": null
     }
   ]
 }
