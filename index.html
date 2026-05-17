@@ -235,6 +235,12 @@ body { font-family: var(--sans); font-size: 14px; background: var(--bg); color: 
 </div>
 
 <script>
+// Auto-load genomic_logbook.json from the same folder if available
+fetch('genomic_logbook.json')
+  .then(r => { if (!r.ok) throw new Error('not found'); return r.json(); })
+  .then(data => loadData(data, 'genomic_logbook.json'))
+  .catch(() => {}); // silently fall back to drop zone if not found
+
 const SAMPLE = {
   entries:[
     {id:1,timestamp:"2026-05-14T21:28:13",date:"2026-05-14",title:"Variant filtering — anoa only (1st try)",analyst:"qhanifa",project:"anoa_wgs",sample_ids:[],organism:"Bubalus depressicornis, Bubalus quarlesi",tool:"bcftools view",tool_version:"",script:"anoa_analysis/scripts/filteri_variants.sh",command:"",job_id:"filter_variants.474718",cluster:"",cpus:"8",mem:"16G",walltime:"4 hours",input_files:"anoa_analysis/vcf_denovo/raw_variants.vcf.gz",output_dir:"anoa_analysis/filtered",ref_genome:"bosTau9",status:"completed",results:"",notes:"default parameters, have not followed PNAS paper parameters",tags:["variant-calling"]},
