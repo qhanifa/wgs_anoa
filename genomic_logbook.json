@@ -409,7 +409,7 @@
       "title": "Merge VCF (anoa samples and outgroup)",
       "tool": "bcftools merge",
       "output_dir": "anoa_analysis/vcf_denovo",
-      "status": "running",
+      "status": "completed",
       "notes": "merging 12 anoa samples and 1 outgroup (african buffalo)",
       "tags": [
         "SNP Phylogeny",
@@ -429,7 +429,7 @@
       "walltime": "06:00:00",
       "input_files": "anoa_analysis/vcf_denovo/raw_variants.vcf.gz \nanoa_analysis/outgroup/buffalo_all_chr.vcf.gz",
       "ref_genome": "btau9",
-      "results": ""
+      "results": "finished in 5h 42m. output: raw_variants_with_outgroup.vcf.gz (55G)"
     },
     {
       "id": 17,
@@ -443,8 +443,8 @@
       "notes": "Extracting genotypes and consequences (CSQ): Anara    0/0    synonymous_variant|... Anara    0/1    missense_variant|...",
       "tags": [
         "N/S ratio",
-	  "Paper_2", 
-	  "organizing"
+        "Paper_2",
+        "organizing"
       ],
       "project": "anoa_wgs",
       "sample_ids": [],
@@ -493,8 +493,8 @@
       "priority": "high",
       "due": "2026-05-16",
       "ref_id": "",
-      "done": false,
-      "done_at": null
+      "done": true,
+      "done_at": "2026-05-17T17:54:40"
     },
     {
       "id": 4,
@@ -548,6 +548,17 @@
       "priority": "high",
       "due": "2026-05-18",
       "ref_id": "15",
+      "done": false,
+      "done_at": null
+    },
+    {
+      "id": 9,
+      "created": "2026-05-17T17:54:44",
+      "task": "Re-run CSQ extract - N/S ratio",
+      "category": "follow-up",
+      "priority": "high",
+      "due": "2026-05-18",
+      "ref_id": "17",
       "done": false,
       "done_at": null
     }
