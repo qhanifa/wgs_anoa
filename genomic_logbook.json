@@ -480,8 +480,7 @@
       "tool_version": "2.00",
       "script": "anoa_analysis/scripts/pixy.sh",
       "command": "pixy --stats fst dxy pi \\\n    --vcf $VCF_DIR/raw_variants.vcf.gz \\\n    --populations $OUT/popmap.txt \\\n    --window_size 10000 \\\n    --output_folder $OUT \\\n    --output_prefix anoa_pixy \\\n    --n_cores 8",
-      "job_id": "482959",
-      "cluster": "trembesi53",
+      "job_id": "482959",      "cluster": "trembesi53",
       "cpus": "8",
       "mem": "32G",
       "walltime": "12:00:00",
@@ -497,7 +496,7 @@
       "title": "Refilter VCF for IQ-TREE - bcftools filter",
       "tool": "bcftools filter",
       "output_dir": "anoa_analysis/filtered",
-      "status": "running",
+      "status": "completed",
       "notes": "Filtering raw_variants for 12 anoa + 1 outgroup for phylogeny",
       "tags": [
         "SNP Phylogeny",
@@ -510,12 +509,42 @@
       "tool_version": "1.23",
       "script": "anoa_analysis/scripts/refilter_iqtree.sh",
       "command": "bcftools view \\\n    -m2 -M2 \\\n    -v snps \\\n    -O u \\\n    $VCF_DIR/raw_variants_with_outgroup.vcf.gz | \\\nbcftools +fill-tags \\\n    -O u -- -t MAF,F_MISSING | \\\nbcftools filter \\\n    -e 'MAF<0.05 || F_MISSING>0.05 || AC==0 || AC==AN || MIN(GQ)<20' \\\n    -O z \\\n    --threads 8 \\\n    -o $OUT/filtered_snps_with_outgroup.vcf.gz",
-      "job_id": "bcftools index -t $OUT/filtered_snps_with_outgroup.vcf.gz 482959",
+      "job_id": "483147",
       "cluster": "trembesi70",
       "cpus": "8",
       "mem": "16G",
       "walltime": "04:00:00",
       "input_files": "anoa_analysis/vcf_denovo/raw_variants_with_outgroup.vcf.gz",
+      "ref_genome": "btau9",
+      "results": "finished in 1h 46m. output: filtered_snps_with_outgroup.vcf.gz"
+    },
+    {
+      "id": 20,
+      "timestamp": "2026-05-18T09:42:12",
+      "date": "2026-05-18",
+      "analyst": "qonitahanifa",
+      "title": "Convert VCF to PHYLIP",
+      "tool": "vcf2phylip",
+      "output_dir": "anoa_analysis/iqtree",
+      "status": "running",
+      "notes": "2 parameters: min4 (keep sites present in at least 4 samples) and min13 (keep sites present in all samples). Set outgroup (-o) to listed as the first taxon in the alignment. 3 output: .phy, .fasta, .nexus",
+      "tags": [
+        "SNP Phylogeny",
+        "Paper_2",
+        "file conversion"
+      ],
+      "project": "anoa_wgs",
+      "sample_ids": [],
+      "organism": "BDBQ",
+      "tool_version": "",
+      "script": "anoa_analysis/scripts/vcf2phylip.sh",
+      "command": "python $SCRIPTS/vcf2phylip.py \\\n    -i $VCF \\\n    --output-folder $OUT \\\n    --output-prefix snps_alignment_min4 \\\n    -f -npython $SCRIPTS/vcf2phylip.py \\\n    -i $VCF \\\n    --min-samples-locus 13 \\\n    --output-folder $OUT \\\n    --output-prefix snps_alignment_min13 \\",
+      "job_id": "483247",
+      "cluster": "trembesi53",
+      "cpus": "4",
+      "mem": "8G",
+      "walltime": "02:00:00",
+      "input_files": "anoa_analysis/filtered/filtered_snps_with_outgroup.vcf.gz",
       "ref_genome": "btau9",
       "results": ""
     }
@@ -584,8 +613,8 @@
       "priority": "high",
       "due": "2026-05-17",
       "ref_id": "13",
-      "done": false,
-      "done_at": null
+      "done": true,
+      "done_at": "2026-05-18T09:52:32"
     },
     {
       "id": 7,
