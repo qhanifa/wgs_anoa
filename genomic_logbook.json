@@ -650,6 +650,51 @@
         "FST-DXY",
         "dataviz"
       ]
+    },
+    {
+      "id": 26,
+      "timestamp": "2026-05-18T14:52:27",
+      "date": "2026-05-18",
+      "analyst": "qonitahanifa",
+      "title": "FST-DXY combined scatter plot",
+      "tool": "R/ggplot2",
+      "output_dir": "local/WGS_anoa/popgen_anoa/fst_dxy/",
+      "status": "completed",
+      "notes": "fst_vs_dxy_scatter.png",
+      "tags": [
+        "FST-DXY",
+        "dataviz"
+      ]
+    },
+    {
+      "id": 27,
+      "timestamp": "2026-05-18T15:39:08",
+      "date": "2026-05-18",
+      "analyst": "qonitahanifa",
+      "title": "IBS calculation - PLINK",
+      "tool": "PLINK",
+      "output_dir": "anoa_analysis/plink",
+      "status": "completed",
+      "notes": "",
+      "tags": [
+        "IBS",
+        "Pairwise distance",
+        "Paper_1"
+      ],
+      "project": "anoa_wgs",
+      "sample_ids": [],
+      "organism": "BDBQ",
+      "tool_version": "",
+      "script": "anoa_analysis/scripts/ibs.sh",
+      "command": "plink \\\n    --vcf filtered/filtered_snps.vcf.gz \\\n    --distance square ibs \\\n    --allow-extra-chr \\\n    --out plink/anoa_ibs \\\n    2> logs/plink_ibs.log",
+      "job_id": "483476",
+      "cluster": "trembesi70",
+      "cpus": "",
+      "mem": "",
+      "walltime": "",
+      "input_files": "_scratch/filtered/filtered_snps.vcf.gz",
+      "ref_genome": "btau9",
+      "results": "IBS values 0.7-1.0 (narrow range), expected in closely related species. High similarity within species, lower similarity across species, with Hesti showing moderate similarity to both lowland and mountain anoa. "
     }
   ],
   "todos": [
@@ -760,8 +805,8 @@
       "priority": "medium",
       "due": "2026-05-18",
       "ref_id": "18",
-      "done": false,
-      "done_at": null
+      "done": true,
+      "done_at": "2026-05-18T16:21:48"
     },
     {
       "id": 11,
@@ -771,8 +816,8 @@
       "priority": "medium",
       "due": "2026-05-18",
       "ref_id": "",
-      "done": false,
-      "done_at": null
+      "done": true,
+      "done_at": "2026-05-18T16:21:50"
     },
     {
       "id": 12,
