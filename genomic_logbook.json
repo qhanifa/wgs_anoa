@@ -689,6 +689,17 @@
       "ref_id": "18",
       "done": false,
       "done_at": null
+    },
+    {
+      "id": 11,
+      "created": "2026-05-18T13:35:40",
+      "task": "Individual IBS calculation",
+      "category": "follow-up",
+      "priority": "medium",
+      "due": "2026-05-18",
+      "ref_id": "",
+      "done": false,
+      "done_at": null
     }
   ]
 }
