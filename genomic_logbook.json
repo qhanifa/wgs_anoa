@@ -576,7 +576,80 @@
       "walltime": "48:00:00",
       "input_files": "anoa_analysis/iqtree/min13/anoa_min13.varsites.phy",
       "ref_genome": "btau9",
-      "results": "failed due to buggy ModelFinder crash when finding suitable models. Follow-up: specify model directly)"
+      "results": "failed at 19m 13s due to buggy ModelFinder crash when finding suitable models. Follow-up: specify model directly)"
+    },
+    {
+      "id": 22,
+      "timestamp": "2026-05-18T14:42:06",
+      "date": "2026-05-18",
+      "analyst": "qonitahanifa",
+      "title": "Pyhlogeny min13 #2 - IQ-TREE",
+      "tool": "IQ-TREE",
+      "output_dir": "anoa_analysis/iqtree/",
+      "status": "running",
+      "notes": "rerun with -m MFP+ASC \u2192 -m GTR+ASC+R4 (skips ModelFinder, avoids the crash) and added   --redo to ignore the stale checkpoint from the failed run",
+      "tags": [
+        "SNP Phylogeny",
+        "Paper_1"
+      ],
+      "project": "anoa_wgs",
+      "sample_ids": [],
+      "organism": "BDBQ",
+      "tool_version": "3.1.1",
+      "script": "anoa_analysis/scripts/iqtree_min13.sh",
+      "command": "iqtree \\\n    -s $OUT/min13/anoa_min13.varsites.phy \\\n    -m GTR+ASC+R4 \\\n    -B 1000 \\\n    -T $SLURM_CPUS_PER_TASK \\\n    -o african_buffalo \\\n    --prefix $OUT/min13/anoa_min13 \\\n    --redo",
+      "job_id": "483456",
+      "cluster": "trembesi53",
+      "cpus": "16",
+      "mem": "64G",
+      "walltime": "48:00:00",
+      "input_files": "anoa_analysis/iqtree/min13/anoa_min13.varsites.phy",
+      "ref_genome": "btau9",
+      "results": ""
+    },
+    {
+      "id": 23,
+      "timestamp": "2026-05-18T14:47:02",
+      "date": "2026-05-18",
+      "analyst": "qonitahanifa",
+      "title": "FST Manhattan plot",
+      "tool": "R/ggplot2",
+      "output_dir": "local/WGS_anoa/popgen_anoa/fst_dxy/",
+      "status": "completed",
+      "notes": "fst_manhattan.png and fst_manhattan_v2.png",
+      "tags": [
+        "FST-DXY"
+      ]
+    },
+    {
+      "id": 24,
+      "timestamp": "2026-05-18T14:49:13",
+      "date": "2026-05-18",
+      "analyst": "qonitahanifa",
+      "title": "DXY Manhattan plot",
+      "tool": "R/ggplot2",
+      "output_dir": "local/WGS_anoa/popgen_anoa/fst_dxy/",
+      "status": "completed",
+      "notes": "dxy_manhattan.png and dxy_manhattan_v2.png",
+      "tags": [
+        "FST-DXY",
+        "dataviz"
+      ]
+    },
+    {
+      "id": 25,
+      "timestamp": "2026-05-18T14:50:11",
+      "date": "2026-05-18",
+      "analyst": "qonitahanifa",
+      "title": "FST-DXY combined Manhattan plot",
+      "tool": "R/ggplot2",
+      "output_dir": "local/WGS_anoa/popgen_anoa/fst_dxy/",
+      "status": "completed",
+      "notes": "fst_dxy_v2_combined.png",
+      "tags": [
+        "FST-DXY",
+        "dataviz"
+      ]
     }
   ],
   "todos": [
