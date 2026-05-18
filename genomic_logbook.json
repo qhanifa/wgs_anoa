@@ -557,7 +557,7 @@
       "title": "Phylogeny min13 - IQTREE",
       "tool": "IQTREE",
       "output_dir": "anoa_analysis/iqtree",
-      "status": "running",
+      "status": "failed",
       "notes": "For min13 filter, running one .phy file at a time",
       "tags": [
         "SNP_Phylogeny",
@@ -576,7 +576,7 @@
       "walltime": "48:00:00",
       "input_files": "anoa_analysis/iqtree/min13/anoa_min13.varsites.phy",
       "ref_genome": "btau9",
-      "results": ""
+      "results": "failed due to buggy ModelFinder crash when finding suitable models. Follow-up: specify model directly)"
     }
   ],
   "todos": [
@@ -698,6 +698,17 @@
       "priority": "medium",
       "due": "2026-05-18",
       "ref_id": "",
+      "done": false,
+      "done_at": null
+    },
+    {
+      "id": 12,
+      "created": "2026-05-18T14:23:48",
+      "task": "Revise iqtree_min4.sh script",
+      "category": "pending-analysis",
+      "priority": "medium",
+      "due": "2026-05-19",
+      "ref_id": "21",
       "done": false,
       "done_at": null
     }
