@@ -11,7 +11,7 @@
       "status": "completed",
       "notes": "default parameters, have not followed PNAS paper parameters",
       "tags": [
-        "variant-calling"
+        "Filtering"
       ],
       "project": "",
       "sample_ids": [],
@@ -123,7 +123,7 @@
       "status": "completed",
       "notes": "running without GQ cutoff, accidentally deleted the previous fltered vcf files",
       "tags": [
-        "variant-calling"
+        "Filtering"
       ],
       "project": "anoa_wgs",
       "sample_ids": [],
@@ -181,7 +181,8 @@
       "notes": "2 species clearly clustered with Hesti as potential outlier (mountain anoa clustering with lowland anoa samples). Calculated from filtered snaps vcf from scratch",
       "tags": [
         "Paper_1",
-        "PCA"
+        "PCA",
+	"dataviz"
       ],
       "project": "anoa_wgs",
       "sample_ids": [],
@@ -326,7 +327,7 @@
       "status": "completed",
       "notes": "previous run skipped MAF and F_MISSING silently, filtering incomplete. current run adds bcftools +fill tags to calculate both columns",
       "tags": [
-        "variant-calling"
+        "filtering"
       ],
       "project": "anoa_wgs",
       "sample_ids": [],
@@ -560,7 +561,7 @@
       "status": "failed",
       "notes": "For min13 filter, running one .phy file at a time",
       "tags": [
-        "SNP_Phylogeny",
+        "SNP Phylogeny",
         "Paper_2"
       ],
       "project": "anoa_wgs",
@@ -618,7 +619,8 @@
       "status": "completed",
       "notes": "fst_manhattan.png and fst_manhattan_v2.png",
       "tags": [
-        "FST-DXY"
+        "FST-DXY",
+	"dataviz"
       ]
     },
     {
@@ -704,7 +706,7 @@
       "title": "Phylogeny min4 - IQ-TREE",
       "tool": "IQ-TREE",
       "output_dir": "anoa_analysis/iqtree/min4",
-      "status": "running",
+      "status": "completed",
       "notes": "run with -m MFP+ASC \u2192 -m GTR+ASC+R4 (skips ModelFinder, avoids the crash). need to look up if this is ideal or not.",
       "tags": [
         "SNP Phylogeny",
@@ -722,6 +724,36 @@
       "mem": "64G",
       "walltime": "48:00:00",
       "input_files": "anoa_analysis/iqtree/min13/anoa_min13.varsites.phy",
+      "ref_genome": "btau9",
+      "results": "consistent phylogeny with min13. finished in 50m 53s"
+    },
+    {
+      "id": 29,
+      "timestamp": "2026-05-19T12:12:46",
+      "date": "2026-05-19",
+      "analyst": "qonitahanifa",
+      "title": "Extracting CSQ #2 - N/S ratio",
+      "tool": "bcftools query",
+      "output_dir": "anoa_analysis/vep",
+      "status": "running",
+      "notes": "Extracting genotypes and consequences (CSQ): Anara 0/0 synonymous_variant|... Anara 0/1 missense_variant|...",
+      "tags": [
+        "N/S ratio",
+        "Paper_2",
+        "organizing"
+      ],
+      "project": "anoa_wgs",
+      "sample_ids": [],
+      "organism": "BDBQ",
+      "tool_version": "1.23",
+      "script": "anoa_analysis/extract_consequences.sh",
+      "command": " bcftools query \\                                                                  \n      -f '[%SAMPLE\\t%GT\\t%CSQ\\n]' \\                                                 \n      vep/annotated_variants.vcf.gz \\                                               \n      > vep/consequences_per_sample.txt",
+      "job_id": "483856",
+      "cluster": "trembesi53",
+      "cpus": "1",
+      "mem": "8G",
+      "walltime": "02:00:00",
+      "input_files": "anoa_analysis/vep/annotated_variants.vcf.gz ",
       "ref_genome": "btau9",
       "results": ""
     }
@@ -858,6 +890,17 @@
       "ref_id": "21",
       "done": true,
       "done_at": "2026-05-18T20:48:35"
+    },
+    {
+      "id": 13,
+      "created": "2026-05-19T12:17:18",
+      "task": "Tree visualization with R",
+      "category": "pending-analysis",
+      "priority": "high",
+      "due": "2026-05-20",
+      "ref_id": "28",
+      "done": false,
+      "done_at": null
     }
   ]
 }
