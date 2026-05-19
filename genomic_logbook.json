@@ -969,6 +969,17 @@
       "ref_id": "28",
       "done": false,
       "done_at": null
+    },
+    {
+      "id": 16,
+      "created": "2026-05-19T21:54:44",
+      "task": "Results drafting - Phase 1",
+      "category": "pending-analysis",
+      "priority": "high",
+      "due": "2026-05-20",
+      "ref_id": "",
+      "done": false,
+      "done_at": null
     }
   ]
 }
