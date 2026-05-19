@@ -765,7 +765,7 @@
       "title": "N/S ratio pipeline",
       "tool": "python",
       "output_dir": "anoa_analysis/vep",
-      "status": "running",
+      "status": "completed",
       "notes": "running all statistical testing - visualisation.",
       "tags": [
         "N/S ratio",
@@ -785,7 +785,23 @@
       "walltime": "02:00:00",
       "input_files": "anoa_analysis/vep/annotated_variants.vcf.gz",
       "ref_genome": "btau9",
-      "results": ""
+      "results": "as far as i can interpret, there is no significant difference between the two species, but I'll have to check again"
+    },
+    {
+      "id": 31,
+      "timestamp": "2026-05-19T21:42:02",
+      "date": "2026-05-19",
+      "analyst": "qonitahanifa",
+      "title": "Watterson's theta - ANGSD",
+      "tool": "ANGSD",
+      "output_dir": "anoa_analysis/angsd",
+      "status": "running",
+      "notes": "",
+      "tags": [
+        "per gene analysis",
+        "Paper_2",
+        "theta"
+      ]
     }
   ],
   "todos": [
@@ -863,8 +879,8 @@
       "priority": "medium",
       "due": "2026-05-18",
       "ref_id": "15",
-      "done": false,
-      "done_at": null
+      "done": true,
+      "done_at": "2026-05-19T21:36:40"
     },
     {
       "id": 8,
@@ -885,8 +901,8 @@
       "priority": "high",
       "due": "2026-05-18",
       "ref_id": "17",
-      "done": false,
-      "done_at": null
+      "done": true,
+      "done_at": "2026-05-19T21:36:43"
     },
     {
       "id": 10,
@@ -940,6 +956,17 @@
       "priority": "medium",
       "due": "2026-05-20",
       "ref_id": "",
+      "done": false,
+      "done_at": null
+    },
+    {
+      "id": 15,
+      "created": "2026-05-19T21:39:09",
+      "task": "Tree visualisation literature review",
+      "category": "follow-up",
+      "priority": "medium",
+      "due": "2026-05-20",
+      "ref_id": "28",
       "done": false,
       "done_at": null
     }
