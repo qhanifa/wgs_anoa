@@ -586,7 +586,7 @@
       "title": "Pyhlogeny min13 #2 - IQ-TREE",
       "tool": "IQ-TREE",
       "output_dir": "anoa_analysis/iqtree/",
-      "status": "running",
+      "status": "completed",
       "notes": "rerun with -m MFP+ASC \u2192 -m GTR+ASC+R4 (skips ModelFinder, avoids the crash) and added   --redo to ignore the stale checkpoint from the failed run",
       "tags": [
         "SNP Phylogeny",
@@ -605,7 +605,7 @@
       "walltime": "48:00:00",
       "input_files": "anoa_analysis/iqtree/min13/anoa_min13.varsites.phy",
       "ref_genome": "btau9",
-      "results": ""
+      "results": "lowland and mountain anoa formed distinct clades, except Hesti clustered together with lowland anoa and very distant from other mountain anoa. min13 filter may be too strict, proceed with running min4. finished in 54m 4s"
     },
     {
       "id": 23,
@@ -695,6 +695,35 @@
       "input_files": "_scratch/filtered/filtered_snps.vcf.gz",
       "ref_genome": "btau9",
       "results": "IBS values 0.7-1.0 (narrow range), expected in closely related species. High similarity within species, lower similarity across species, with Hesti showing moderate similarity to both lowland and mountain anoa. "
+    },
+    {
+      "id": 28,
+      "timestamp": "2026-05-18T20:59:38",
+      "date": "2026-05-18",
+      "analyst": "qonitahanifa",
+      "title": "Phylogeny min4 - IQ-TREE",
+      "tool": "IQ-TREE",
+      "output_dir": "anoa_analysis/iqtree/min4",
+      "status": "running",
+      "notes": "run with -m MFP+ASC \u2192 -m GTR+ASC+R4 (skips ModelFinder, avoids the crash). need to look up if this is ideal or not.",
+      "tags": [
+        "SNP Phylogeny",
+        "Paper_1"
+      ],
+      "project": "anoa_wgs",
+      "sample_ids": [],
+      "organism": "BDBQ",
+      "tool_version": "3.1.1",
+      "script": "anoa_analysis/scripts/iqtree_min4.sh",
+      "command": "variant block generation + iqtree \\\n    -s $OUT/min13/anoa_min13.varsites.phy \\\n    -m GTR+ASC+R4 \\\n    -B 1000 \\\n    -T $SLURM_CPUS_PER_TASK \\\n    -o african_buffalo \\\n    --prefix $OUT/min13/anoa_min13 \\\n    --redo",
+      "job_id": "",
+      "cluster": "trembesi53",
+      "cpus": "16",
+      "mem": "64G",
+      "walltime": "48:00:00",
+      "input_files": "anoa_analysis/iqtree/min13/anoa_min13.varsites.phy",
+      "ref_genome": "btau9",
+      "results": ""
     }
   ],
   "todos": [
@@ -827,8 +856,8 @@
       "priority": "medium",
       "due": "2026-05-19",
       "ref_id": "21",
-      "done": false,
-      "done_at": null
+      "done": true,
+      "done_at": "2026-05-18T20:48:35"
     }
   ]
 }
