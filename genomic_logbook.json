@@ -765,7 +765,7 @@
       "title": "N/S ratio pipeline",
       "tool": "python",
       "output_dir": "anoa_analysis/vep",
-      "status": "completed",
+      "status": "failed",
       "notes": "running all statistical testing - visualisation.",
       "tags": [
         "N/S ratio",
@@ -785,7 +785,7 @@
       "walltime": "02:00:00",
       "input_files": "anoa_analysis/vep/annotated_variants.vcf.gz",
       "ref_genome": "btau9",
-      "results": "as far as i can interpret, there is no significant difference between the two species, but I'll have to check again"
+      "results": "incorrect parameter, showing identical n/s ratio across all 12 samples. the script did not differentiate between samples. follow up: fix script to only count variants where the sample actually carries alternate allele. finished in 17m 49s"
     },
     {
       "id": 31,
@@ -826,7 +826,7 @@
       "title": "Watterson's theta #2 - ANGSD",
       "tool": "ANGSD",
       "output_dir": "anoa_analysis/angsd",
-      "status": "pending",
+      "status": "running",
       "notes": "rerun with forcing ref path for angsd to read. half of the crams' ref path is raisa's local path. increased memory req to 220 GB",
       "tags": [
         "per gene analysis",
@@ -848,6 +848,36 @@
       "mem": "220G",
       "walltime": "48:00:00",
       "input_files": "_scratch/cram/*.cram\n    _sratch/cram/*.cram.crai\n    _scratch/cram/lowland_crams.list \n    _scratch/cram/mountain_crams.list ",
+      "ref_genome": "btau9",
+      "results": ""
+    },
+    {
+      "id": 33,
+      "timestamp": "2026-05-20T17:13:56",
+      "date": "2026-05-20",
+      "analyst": "qonitahanifa",
+      "title": "N/S ratio pipeline #2",
+      "tool": "python",
+      "output_dir": "anoa_analysis/vep",
+      "status": "running",
+      "notes": "rerun with modified script -to only count variants with alternate alleles",
+      "tags": [
+        "N/S ratio",
+        "Paper_2",
+        "dataviz"
+      ],
+      "project": "anoa_wgs",
+      "sample_ids": [],
+      "organism": "BDBQ",
+      "tool_version": "",
+      "script": "anoa_analysis/scripts/ns_ratio.sh",
+      "command": "",
+      "job_id": "484421",
+      "cluster": "trembesi53",
+      "cpus": "4",
+      "mem": "16G",
+      "walltime": "02:00:00",
+      "input_files": "anoa_analysis/vep/annotated_variants.vcf.gz\nanoa_analysis/vep/consequences_per_sample.txt\nanoa_analysis/vep/ns_ratio.py",
       "ref_genome": "btau9",
       "results": ""
     }
