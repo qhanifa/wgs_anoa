@@ -789,19 +789,67 @@
     },
     {
       "id": 31,
-      "timestamp": "2026-05-19T21:42:02",
-      "date": "2026-05-19",
+      "timestamp": "2026-05-20T08:17:29",
+      "date": "2026-05-20",
       "analyst": "qonitahanifa",
       "title": "Watterson's theta - ANGSD",
       "tool": "ANGSD",
       "output_dir": "anoa_analysis/angsd",
-      "status": "running",
-      "notes": "",
+      "status": "failed",
+      "notes": "failed after 1h 26 due to mwrong reference path on header of cram files and realSFS hit memory limit. follow up: update ref path and reduce -nSites to lower the memory requirement",
       "tags": [
         "per gene analysis",
         "Paper_2",
-        "theta"
-      ]
+        "theta",
+        "functional comparison"
+      ],
+      "project": "anoa_wgs",
+      "sample_ids": [],
+      "organism": "BDBQ",
+      "tool_version": "0.940",
+      "script": "anoa_analysis/scripts/angsd_theta.sh",
+      "command": " angsd \\\n\t-bam ${CRAM_DIR}/${SPECIES}_crams.list \\\n        -ref $REF \\\n        -anc $REF \\\n        -GL 1 \\\n        -doSaf 1 \\\n        -nThreads 8 \\\n        -out ${OUT}/${SPECIES}_saf\n realSFS \\\n\t${OUT}/${SPECIES}_saf.saf.idx \\\n        -P 8 \\\n\t> ${OUT}/${SPECIES}.sfs\nrealSFS saf2theta \\\n        ${OUT}/${SPECIES}_saf.saf.idx \\\n        -sfs ${OUT}/${SPECIES}.sfs \\\n        -outname ${OUT}/${SPECIES}_theta\n thetaStat do_stat \\\n        ${OUT}/${SPECIES}_theta.thetas.idx \\\n        -win 10000 \\\n        -step 10000 \\\n        -outnames ${OUT}/${SPECIES}_theta_win",
+      "job_id": "484091",
+      "cluster": "",
+      "cpus": "8",
+      "mem": "64G",
+      "walltime": "48:00:00",
+      "input_files": "_scratch/cram/*.cram\n_sratch/cram/*.cram.crai\n_scratch/cram/lowland_crams.list\n_scratch/cram/mountain_crams.list ",
+      "ref_genome": "btau9",
+      "results": ""
+    },
+    {
+      "id": 32,
+      "timestamp": "2026-05-20T08:52:46",
+      "date": "2026-05-20",
+      "analyst": "qonitahanifa",
+      "title": "Watterson's theta #2 - ANGSD",
+      "tool": "ANGSD",
+      "output_dir": "anoa_analysis/angsd",
+      "status": "running",
+      "notes": "rerun with forcing ref path for angsd to read. half of the crams' ref path is raisa's local path. increased memory req to 220 GB",
+      "tags": [
+        "per gene analysis",
+        "Paper_2",
+        "theta",
+        "functional comparison"
+      ],
+      "project": "anoa_wgs",
+      "sample_ids": [
+        "BDBQ"
+      ],
+      "organism": "BDBQ",
+      "tool_version": "0.940",
+      "script": "anoa_analysis/scripts/angsd_theta.sh",
+      "command": "\t-bam ${CRAM_DIR}/${SPECIES}_crams.list \\\n        -ref $REF \\\n        -anc $REF \\\n        -GL 1 \\\n        -doSaf 1 \\\n        -nThreads 8 \\\n        -out ${OUT}/${SPECIES}_saf                            \n     realSFS \\\n\t${OUT}/${SPECIES}_saf.saf.idx \\\n        -P 8 \\\n\t> ${OUT}/${SPECIES}.sfs            \n    realSFS saf2theta \\\n        ${OUT}/${SPECIES}_saf.saf.idx \\\n        -sfs ${OUT}/${SPECIES}.sfs \\\n        -outname ${OUT}/${SPECIES}_theta            \n     thetaStat do_stat \\\n        ${OUT}/${SPECIES}_theta.thetas.idx \\\n        -win 10000 \\\n        -step 10000 \\\n        -outnames ${OUT}/${SPECIES}_theta_win ",
+      "job_id": "484255",
+      "cluster": "",
+      "cpus": "8",
+      "mem": "220G",
+      "walltime": "48:00:00",
+      "input_files": "_scratch/cram/*.cram\n    _sratch/cram/*.cram.crai\n    _scratch/cram/lowland_crams.list \n    _scratch/cram/mountain_crams.list ",
+      "ref_genome": "btau9",
+      "results": ""
     }
   ],
   "todos": [
