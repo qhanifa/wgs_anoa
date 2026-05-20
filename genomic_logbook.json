@@ -859,7 +859,7 @@
       "title": "N/S ratio pipeline #2",
       "tool": "python",
       "output_dir": "anoa_analysis/vep",
-      "status": "running",
+      "status": "completed",
       "notes": "rerun with modified script -to only count variants with alternate alleles",
       "tags": [
         "N/S ratio",
@@ -879,7 +879,7 @@
       "walltime": "02:00:00",
       "input_files": "anoa_analysis/vep/annotated_variants.vcf.gz\nanoa_analysis/vep/consequences_per_sample.txt\nanoa_analysis/vep/ns_ratio.py",
       "ref_genome": "btau9",
-      "results": ""
+      "results": "finished in 12m 27s. result shows significant difference in N/S ratio between lowland and mountain anoa :)"
     }
   ],
   "todos": [
