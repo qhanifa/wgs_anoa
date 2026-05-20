@@ -880,6 +880,36 @@
       "input_files": "anoa_analysis/vep/annotated_variants.vcf.gz\nanoa_analysis/vep/consequences_per_sample.txt\nanoa_analysis/vep/ns_ratio.py",
       "ref_genome": "btau9",
       "results": "finished in 12m 27s. result shows significant difference in N/S ratio between lowland and mountain anoa :)"
+    },
+    {
+      "id": 34,
+      "timestamp": "2026-05-21T03:12:03",
+      "date": "2026-05-21",
+      "analyst": "qonitahanifa",
+      "title": "Watterson's theta #3 - ANGSD",
+      "tool": "ANGSD",
+      "output_dir": "anoa_analysis/angsd",
+      "status": "running",
+      "notes": "rerun with cram header fixed, hopefully will work. nalhamdulillah job runs right away with no pending",
+      "tags": [
+        "per gene analysis",
+        "Paper_2",
+        "functional comparison"
+      ],
+      "project": "anoa_wgs",
+      "sample_ids": [],
+      "organism": "BDBQ",
+      "tool_version": "0.940",
+      "script": "anoa_analysis/scripts/angsd_theta.sh",
+      "command": " angsd \\\n\t-bam ${CRAM_DIR}/${SPECIES}_crams.list \\\n        -ref $REF \\\n        -anc $REF \\\n        -GL 1 \\\n        -doSaf 1 \\\n        -nThreads 8 \\",
+      "job_id": "484514",
+      "cluster": "trembesi70",
+      "cpus": "8",
+      "mem": "250G",
+      "walltime": "48:00:00",
+      "input_files": "_scratch/cram/*.cram\n    _sratch/cram/*.cram.crai\n    _scratch/cram/lowland_crams.list \n    _scratch/cram/mountain_crams.list ",
+      "ref_genome": "btau9",
+      "results": ""
     }
   ],
   "todos": [
@@ -1067,8 +1097,8 @@
       "priority": "high",
       "due": "2026-05-21",
       "ref_id": "32",
-      "done": false,
-      "done_at": null
+      "done": true,
+      "done_at": "2026-05-21T03:16:14"
     },
     {
       "id": 18,
@@ -1078,8 +1108,8 @@
       "priority": "high",
       "due": "2026-05-21",
       "ref_id": "32",
-      "done": false,
-      "done_at": null
+      "done": true,
+      "done_at": "2026-05-21T03:16:18"
     }
   ]
 }
