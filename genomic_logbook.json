@@ -826,7 +826,7 @@
       "title": "Watterson's theta #2 - ANGSD",
       "tool": "ANGSD",
       "output_dir": "anoa_analysis/angsd",
-      "status": "running",
+      "status": "pending",
       "notes": "rerun with forcing ref path for angsd to read. half of the crams' ref path is raisa's local path. increased memory req to 220 GB",
       "tags": [
         "per gene analysis",
