@@ -889,7 +889,7 @@
       "title": "Watterson's theta #3 - ANGSD",
       "tool": "ANGSD",
       "output_dir": "anoa_analysis/angsd",
-      "status": "running",
+      "status": "completed",
       "notes": "rerun with cram header fixed, hopefully will work. nalhamdulillah job runs right away with no pending",
       "tags": [
         "per gene analysis",
@@ -909,7 +909,7 @@
       "walltime": "48:00:00",
       "input_files": "_scratch/cram/*.cram\n    _sratch/cram/*.cram.crai\n    _scratch/cram/lowland_crams.list \n    _scratch/cram/mountain_crams.list ",
       "ref_genome": "btau9",
-      "results": ""
+      "results": "finished in 17h 13m, 108 GB output size. alhamdulillah"
     }
   ],
   "todos": [
@@ -1110,6 +1110,28 @@
       "ref_id": "32",
       "done": true,
       "done_at": "2026-05-21T03:16:18"
+    },
+    {
+      "id": 19,
+      "created": "2026-05-21T21:41:47",
+      "task": "interpret ANGSD results",
+      "category": "follow-up",
+      "priority": "high",
+      "due": "2026-05-22",
+      "ref_id": "34",
+      "done": false,
+      "done_at": null
+    },
+    {
+      "id": 20,
+      "created": "2026-05-21T21:42:12",
+      "task": "Visualize ANGSD results",
+      "category": "follow-up",
+      "priority": "high",
+      "due": "2026-05-22",
+      "ref_id": "34",
+      "done": false,
+      "done_at": null
     }
   ]
 }
