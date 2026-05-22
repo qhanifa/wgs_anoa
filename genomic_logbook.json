@@ -910,6 +910,35 @@
       "input_files": "_scratch/cram/*.cram\n    _sratch/cram/*.cram.crai\n    _scratch/cram/lowland_crams.list \n    _scratch/cram/mountain_crams.list ",
       "ref_genome": "btau9",
       "results": "finished in 17h 13m, 108 GB output size. alhamdulillah"
+    },
+    {
+      "id": 35,
+      "timestamp": "2026-05-22T12:22:49",
+      "date": "2026-05-22",
+      "analyst": "qonitahanifa",
+      "title": "BED file creation - Per gene FST-DXY",
+      "tool": "zcat",
+      "output_dir": "anoa_analysis/bed",
+      "status": "completed",
+      "notes": "finished in 5s",
+      "tags": [
+        "Paper_2",
+        "per gene FST-DXY"
+      ],
+      "project": "anoa_wgs",
+      "sample_ids": [],
+      "organism": "BQBQ",
+      "tool_version": "",
+      "script": "anoa_analysis/scripts/bed_ref.sh",
+      "command": "",
+      "job_id": "485007",
+      "cluster": "1",
+      "cpus": "8G",
+      "mem": "01:00:00",
+      "walltime": "01:00:00",
+      "input_files": "anoa_analysis/reference/GCF_002263795.3_ARS-UCD2.0_genomic.gtf.gz",
+      "ref_genome": "btau9",
+      "results": ""
     }
   ],
   "todos": [
