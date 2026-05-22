@@ -1187,6 +1187,17 @@
       "ref_id": "",
       "done": false,
       "done_at": null
+    },
+    {
+      "id": 26,
+      "created": "2026-05-22T11:46:29",
+      "task": "Backup repaired CRAM files",
+      "category": "pending-analysis",
+      "priority": "high",
+      "due": "2026-05-22",
+      "ref_id": "",
+      "done": false,
+      "done_at": null
     }
   ]
 }
