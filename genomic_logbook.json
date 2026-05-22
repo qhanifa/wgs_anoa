@@ -1132,6 +1132,61 @@
       "ref_id": "34",
       "done": false,
       "done_at": null
+    },
+    {
+      "id": 21,
+      "created": "2026-05-22T11:38:43",
+      "task": "Per gene Pixy: 1. Prepare Reference BED file",
+      "category": "follow-up",
+      "priority": "medium",
+      "due": "2026-05-22",
+      "ref_id": "",
+      "done": false,
+      "done_at": null
+    },
+    {
+      "id": 22,
+      "created": "2026-05-22T11:39:20",
+      "task": "Per gene pixy: 2. Per gene FST-DXY calculation",
+      "category": "follow-up",
+      "priority": "medium",
+      "due": "2026-05-23",
+      "ref_id": "",
+      "done": false,
+      "done_at": null
+    },
+    {
+      "id": 23,
+      "created": "2026-05-22T11:40:12",
+      "task": "Pergene pixy: run ANGSD per gene (supporting data)",
+      "category": "follow-up",
+      "priority": "medium",
+      "due": "2026-05-23",
+      "ref_id": "",
+      "done": false,
+      "done_at": null
+    },
+    {
+      "id": 24,
+      "created": "2026-05-22T11:41:04",
+      "task": "Per gene pixy: 4. Combine pixy and ANGSD results & dataviz in R",
+      "category": "follow-up",
+      "priority": "medium",
+      "due": "2026-05-23",
+      "ref_id": "",
+      "done": false,
+      "done_at": null
+    },
+    {
+      "id": 25,
+      "created": "2026-05-22T11:42:03",
+      "task": "Backup Genome-wide ANGSD output files",
+      "category": "other",
+      "priority": "high",
+      "due": "2026-05-22",
+      "ref_id": "",
+      "done": false,
+      "done_at": null
     }
   ]
 }
