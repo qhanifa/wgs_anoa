@@ -969,6 +969,68 @@
       "input_files": "anoa_analysis/scripts/theta_pergene.py ",
       "ref_genome": "btau9",
       "results": ""
+    },
+    {
+      "id": 37,
+      "timestamp": "2026-05-23T13:23:34",
+      "date": "2026-05-23",
+      "analyst": "qonitahanifa",
+      "title": "Per gene FST-DXY - Pixy",
+      "tool": "Pixy",
+      "output_dir": "anoa_analysis/pixy",
+      "status": "failed",
+      "notes": "",
+      "tags": [
+        "per gene FST DXY",
+        "Paper 2",
+        "functional comparison"
+      ],
+      "project": "anoa_wgs",
+      "sample_ids": [],
+      "organism": "BDBQ",
+      "tool_version": "",
+      "script": "anoa_analysis/scripts/pixy_pergene.sh",
+      "command": "",
+      "job_id": "485256",
+      "cluster": "trembesi68",
+      "cpus": "16",
+      "mem": "48",
+      "walltime": "24:00:00",
+      "input_files": "anoa_analysis/vcf_denovo/raw_variants.vcf.gz\nanoa_analysis/bed/genes.sorted.bed",
+      "ref_genome": "btau9",
+      "results": "different sample names in popmap.txt and vcf file header. vcf file header used full path names \n"
+    },
+    {
+      "id": 38,
+      "timestamp": "2026-05-23T13:43:28",
+      "date": "2026-05-23",
+      "analyst": "qonitahanifa",
+      "title": "Per gene FST-DXY #2 - PIxy",
+      "tool": "Pixy",
+      "output_dir": "anoa_analysis/pixy",
+      "status": "running",
+      "notes": "modified popmap.txt to use full path sample names",
+      "tags": [
+        "per gene FST DXY",
+        "Paper_2",
+        "functional comparison"
+      ],
+      "project": "anoa_wgs",
+      "sample_ids": [
+        ""
+      ],
+      "organism": "BDBQ",
+      "tool_version": "",
+      "script": "anoa_analysis/scripts/pixy_pergene.sh",
+      "command": "",
+      "job_id": "485260",
+      "cluster": "trembesi55",
+      "cpus": "16",
+      "mem": "48G",
+      "walltime": "24:00:00",
+      "input_files": "anoa_analysis/vcf_denovo/raw_variants.vcf.gz\n    anoa_analysis/bed/genes.sorted.bed\u001b[A\u001b[B",
+      "ref_genome": "btau9",
+      "results": ""
     }
   ],
   "todos": [
