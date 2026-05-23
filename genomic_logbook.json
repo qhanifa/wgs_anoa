@@ -948,7 +948,7 @@
       "title": "Per gene theta - ANGSD",
       "tool": "ANGSD",
       "output_dir": "anoa_analysis/angsd",
-      "status": "running",
+      "status": "completed",
       "notes": "thetaStats does not accept BED files directly, processing need python scripts",
       "tags": [
         "per gene theta",
@@ -1211,8 +1211,8 @@
       "priority": "medium",
       "due": "2026-05-23",
       "ref_id": "",
-      "done": false,
-      "done_at": null
+      "done": true,
+      "done_at": "2026-05-23T13:10:32"
     },
     {
       "id": 23,
@@ -1222,8 +1222,8 @@
       "priority": "medium",
       "due": "2026-05-23",
       "ref_id": "",
-      "done": false,
-      "done_at": null
+      "done": true,
+      "done_at": "2026-05-23T13:10:12"
     },
     {
       "id": 24,
