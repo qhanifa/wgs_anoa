@@ -770,7 +770,8 @@
       "tags": [
         "N/S ratio",
         "Paper_2",
-        "dataviz"
+        "dataviz",
+	"genome-wide"
       ],
       "project": "anoa_wgs",
       "sample_ids": [],
@@ -829,7 +830,7 @@
       "status": "failed",
       "notes": "rerun with forcing ref path for angsd to read. half of the crams' ref path is raisa's local path. increased memory req to 220 GB",
       "tags": [
-        "per gene analysis",
+        "Genome-wide",
         "Paper_2",
         "theta",
         "functional comparison"
@@ -864,7 +865,8 @@
       "tags": [
         "N/S ratio",
         "Paper_2",
-        "dataviz"
+        "dataviz",
+	"genome-wide"
       ],
       "project": "anoa_wgs",
       "sample_ids": [],
@@ -892,7 +894,7 @@
       "status": "completed",
       "notes": "rerun with cram header fixed, hopefully will work. nalhamdulillah job runs right away with no pending",
       "tags": [
-        "per gene analysis",
+        "Genome-wide",
         "Paper_2",
         "functional comparison"
       ],
@@ -923,7 +925,9 @@
       "notes": "finished in 5s",
       "tags": [
         "Paper_2",
-        "per gene FST-DXY"
+        "per gene FST-DXY",
+	"functional comparison",
+	"per gene"
       ],
       "project": "anoa_wgs",
       "sample_ids": [],
@@ -953,7 +957,8 @@
       "tags": [
         "per gene theta",
         "Paper_2",
-        "supporting data"
+        "supporting data",
+	"per gene"
       ],
       "project": "anoa_wgs",
       "sample_ids": [],
@@ -983,7 +988,8 @@
       "tags": [
         "per gene FST DXY",
         "Paper 2",
-        "functional comparison"
+        "functional comparison",
+	"per gene"
       ],
       "project": "anoa_wgs",
       "sample_ids": [],
@@ -1008,12 +1014,13 @@
       "title": "Per gene FST-DXY #2 - Pixy",
       "tool": "Pixy",
       "output_dir": "anoa_analysis/pixy",
-      "status": "running",
+      "status": "completed",
       "notes": "modified popmap.txt to use full path sample names",
       "tags": [
         "per gene FST DXY",
         "Paper_2",
-        "functional comparison"
+        "functional comparison",
+	"per gene"
       ],
       "project": "anoa_wgs",
       "sample_ids": [
@@ -1029,6 +1036,37 @@
       "mem": "48G",
       "walltime": "24:00:00",
       "input_files": "anoa_analysis/vcf_denovo/raw_variants.vcf.gz\n    anoa_analysis/bed/genes.sorted.bed\u001b[A\u001b[B",
+      "ref_genome": "btau9",
+      "results": ""
+    },
+    {
+      "id": 39,
+      "timestamp": "2026-05-24T10:06:52",
+      "date": "2026-05-24",
+      "analyst": "qonitahanifa",
+      "title": "Per gene pN/pS ratio",
+      "tool": "python",
+      "output_dir": "anoa_analysis/vep",
+      "status": "running",
+      "notes": "",
+      "tags": [
+	"per gene pN/ps ratio",
+	"Paper_2",
+	"functional comparison",
+	"per gene"
+      ],
+      "project": "anoa_wgs",
+      "sample_ids": [],
+      "organism": "BDBQ",
+      "tool_version": "",
+      "script": "anoa_analysis/scripts/pnps_pergene.sh",
+      "command": "",
+      "job_id": "485482",
+      "cluster": "trembesi54",
+      "cpus": "4",
+      "mem": "32G",
+      "walltime": "04:00:00",
+      "input_files": "anoa_analysis/vep/annotated_variants.vcf.gz \nanoa_analysis/scripts/pnps_pergene.py ",
       "ref_genome": "btau9",
       "results": ""
     }
