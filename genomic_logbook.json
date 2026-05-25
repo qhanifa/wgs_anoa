@@ -1069,6 +1069,37 @@
       "input_files": "anoa_analysis/vep/annotated_variants.vcf.gz \nanoa_analysis/scripts/pnps_pergene.py ",
       "ref_genome": "btau9",
       "results": "High pN/pS genes: 524. Follow up -> find overlapping genes of high FST and High pN/pS"
+    },
+    {
+      "id": 40,
+      "timestamp": "2026-05-25T13:03:15",
+      "date": "2026-05-25",
+      "analyst": "qonitahanifa",
+      "title": "Subset overlapping genes of High FST and High pN/pS - R",
+      "tool": "R",
+      "output_dir": "local/WGS_anoa/popgen_anoa/pnps",
+      "status": "running",
+      "notes": "",
+      "tags": [
+        "per gene",
+        "Paper_2",
+        "per gene FST-DXY",
+        "per gene pN/pS ratio"
+      ],
+      "project": "anoa_wgs",
+      "sample_ids": [],
+      "organism": "BQBQ",
+      "tool_version": "",
+      "script": "local/WGS_anoa/popgen_anoa/pnps/pnps_fst.R",
+      "command": "",
+      "job_id": "",
+      "cluster": "",
+      "cpus": "",
+      "mem": "",
+      "walltime": "",
+      "input_files": " local/WGS_anoa/popgen_anoa/pnps/pnps_per_gene.csv\n local/WGS_anoa/popgen_anoa/pnps/anoa_pixy_pergene_fst.txt\nlocal/WGS_anoa/popgen_anoa/pnps/genes_sorted.bed ",
+      "ref_genome": "btau9",
+      "results": ""
     }
   ],
   "todos": [
