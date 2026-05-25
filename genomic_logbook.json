@@ -1075,10 +1075,10 @@
       "timestamp": "2026-05-25T13:03:15",
       "date": "2026-05-25",
       "analyst": "qonitahanifa",
-      "title": "Subset overlapping genes of High FST and High pN/pS - R",
+      "title": "Candidate genes discovery: Subset overlapping genes of High FST and High pN/pS - R",
       "tool": "R",
       "output_dir": "local/WGS_anoa/popgen_anoa/pnps",
-      "status": "running",
+      "status": "completed",
       "notes": "",
       "tags": [
         "per gene",
@@ -1099,7 +1099,7 @@
       "walltime": "",
       "input_files": " local/WGS_anoa/popgen_anoa/pnps/pnps_per_gene.csv\n local/WGS_anoa/popgen_anoa/pnps/anoa_pixy_pergene_fst.txt\nlocal/WGS_anoa/popgen_anoa/pnps/genes_sorted.bed ",
       "ref_genome": "btau9",
-      "results": ""
+      "results": "discovered 24 genes of interest. Output in local/WGS_anoa/popgen_anoa/pnps/candidate_genes_fst_pnps.csv"
     }
   ],
   "todos": [
