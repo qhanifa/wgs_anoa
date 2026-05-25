@@ -771,7 +771,7 @@
         "N/S ratio",
         "Paper_2",
         "dataviz",
-	"genome-wide"
+        "genome-wide"
       ],
       "project": "anoa_wgs",
       "sample_ids": [],
@@ -866,7 +866,7 @@
         "N/S ratio",
         "Paper_2",
         "dataviz",
-	"genome-wide"
+        "genome-wide"
       ],
       "project": "anoa_wgs",
       "sample_ids": [],
@@ -926,8 +926,8 @@
       "tags": [
         "Paper_2",
         "per gene FST-DXY",
-	"functional comparison",
-	"per gene"
+        "functional comparison",
+        "per gene"
       ],
       "project": "anoa_wgs",
       "sample_ids": [],
@@ -958,7 +958,7 @@
         "per gene theta",
         "Paper_2",
         "supporting data",
-	"per gene"
+        "per gene"
       ],
       "project": "anoa_wgs",
       "sample_ids": [],
@@ -989,7 +989,7 @@
         "per gene FST DXY",
         "Paper 2",
         "functional comparison",
-	"per gene"
+        "per gene"
       ],
       "project": "anoa_wgs",
       "sample_ids": [],
@@ -1020,7 +1020,7 @@
         "per gene FST DXY",
         "Paper_2",
         "functional comparison",
-	"per gene"
+        "per gene"
       ],
       "project": "anoa_wgs",
       "sample_ids": [
@@ -1037,7 +1037,7 @@
       "walltime": "24:00:00",
       "input_files": "anoa_analysis/vcf_denovo/raw_variants.vcf.gz\n    anoa_analysis/bed/genes.sorted.bed\u001b[A\u001b[B",
       "ref_genome": "btau9",
-      "results": ""
+      "results": "High FST genes: 1536. Follow up -> find overlapping genes of high FST and High pN/pS"
     },
     {
       "id": 39,
@@ -1047,13 +1047,13 @@
       "title": "Per gene pN/pS ratio",
       "tool": "python",
       "output_dir": "anoa_analysis/vep",
-      "status": "running",
+      "status": "completed",
       "notes": "",
       "tags": [
-	"per gene pN/ps ratio",
-	"Paper_2",
-	"functional comparison",
-	"per gene"
+        "per gene pN/ps ratio",
+        "Paper_2",
+        "functional comparison",
+        "per gene"
       ],
       "project": "anoa_wgs",
       "sample_ids": [],
@@ -1068,7 +1068,7 @@
       "walltime": "04:00:00",
       "input_files": "anoa_analysis/vep/annotated_variants.vcf.gz \nanoa_analysis/scripts/pnps_pergene.py ",
       "ref_genome": "btau9",
-      "results": ""
+      "results": "High pN/pS genes: 524. Follow up -> find overlapping genes of high FST and High pN/pS"
     }
   ],
   "todos": [
@@ -1333,8 +1333,8 @@
       "priority": "medium",
       "due": "2026-05-23",
       "ref_id": "",
-      "done": false,
-      "done_at": null
+      "done": true,
+      "done_at": "2026-05-25T11:39:34"
     },
     {
       "id": 25,
@@ -1355,6 +1355,28 @@
       "priority": "high",
       "due": "2026-05-22",
       "ref_id": "",
+      "done": false,
+      "done_at": null
+    },
+    {
+      "id": 27,
+      "created": "2026-05-25T11:39:47",
+      "task": "Trim Baraku raw reads",
+      "category": "pending-analysis",
+      "priority": "medium",
+      "due": "",
+      "ref_id": "",
+      "done": false,
+      "done_at": null
+    },
+    {
+      "id": 28,
+      "created": "2026-05-25T11:40:35",
+      "task": "Subset overlapping gene of high FST and low theta",
+      "category": "follow-up",
+      "priority": "high",
+      "due": "2026-05-25",
+      "ref_id": "38",
       "done": false,
       "done_at": null
     }
