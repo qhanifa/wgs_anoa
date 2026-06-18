@@ -1103,7 +1103,7 @@
     },
     {
       "id": 41,
-      "timestamp": "2026-06-18T19:22:37",
+      "timestamp": "2026-06-18T20:57:31",
       "date": "2026-06-18",
       "analyst": "qonitahanifa",
       "title": "Drop chrX from PCA vcf",
@@ -1113,7 +1113,8 @@
       "notes": "",
       "tags": [
         "PCA",
-        "Paper_1"
+        "Paper_1",
+        "dropX"
       ],
       "project": "anoa_wgs",
       "sample_ids": [],
@@ -1127,7 +1128,67 @@
       "mem": "",
       "walltime": "",
       "input_files": "/Users/qonitahanifa/WGS_anoa /filtered/filtered_snps.vcf.gz",
-      "ref_genome": "batu9",
+      "ref_genome": "btau9",
+      "results": "1.2 GB output file (pca_autosomes.vcf.gz)"
+    },
+    {
+      "id": 42,
+      "timestamp": "2026-06-18T21:00:01",
+      "date": "2026-06-18",
+      "analyst": "qonitahanifa",
+      "title": "PCA dropX - plink",
+      "tool": "plink",
+      "output_dir": "/Users/qonitahanifa/WGS_anoa/plink",
+      "status": "completed",
+      "notes": "",
+      "tags": [
+        "PCA",
+        "Paper_1",
+        "dropX"
+      ],
+      "project": "anoa_wgs",
+      "sample_ids": [],
+      "organism": "BDBQ",
+      "tool_version": "",
+      "script": "/Users/qonitahanifa/WGS_anoa/drop_chrX_scripts/pca_autosome.sh",
+      "command": "",
+      "job_id": "",
+      "cluster": "",
+      "cpus": "",
+      "mem": "",
+      "walltime": "",
+      "input_files": "/Users/qonitahanifa/WGS_anoa/filtered/pca_autosomes.vcf.gz",
+      "ref_genome": "btau9",
+      "results": ""
+    },
+    {
+      "id": 43,
+      "timestamp": "2026-06-18T21:03:02",
+      "date": "2026-06-18",
+      "analyst": "qonitahanifa",
+      "title": "PCA dropX - visualization",
+      "tool": "R/ggplot2",
+      "output_dir": "/Users/qonitahanifa/WGS_anoa/popgen_anoa_dropX/PCA",
+      "status": "completed",
+      "notes": "Similar clustering with previous PCA run, only PC1 increased from 22.8% to 23.4%",
+      "tags": [
+        "PCA",
+        "Paper_1",
+        "dropX"
+      ],
+      "project": "anoa_wgs",
+      "sample_ids": [],
+      "organism": "BDBQ",
+      "tool_version": "",
+      "script": "/Users/qonitahanifa/WGS_anoa/popgen_anoa_dropX/PCA/PCA.R",
+      "command": "",
+      "job_id": "",
+      "cluster": "",
+      "cpus": "",
+      "mem": "",
+      "walltime": "",
+      "input_files": "/Users/qonitahanifa/WGS_anoa/popgen_anoa_dropX/PCA/anoa_pca_autosomes.eigenvec\n/Users/qonitahanifa/WGS_anoa/popgen_anoa_dropX/PCA/anoa_pca_autosomes.eigenval",
+      "ref_genome": "btau9",
       "results": ""
     }
   ],
