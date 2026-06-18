@@ -1100,6 +1100,35 @@
       "input_files": " local/WGS_anoa/popgen_anoa/pnps/pnps_per_gene.csv\n local/WGS_anoa/popgen_anoa/pnps/anoa_pixy_pergene_fst.txt\nlocal/WGS_anoa/popgen_anoa/pnps/genes_sorted.bed ",
       "ref_genome": "btau9",
       "results": "discovered 24 genes of interest. Output in local/WGS_anoa/popgen_anoa/pnps/candidate_genes_fst_pnps.csv"
+    },
+    {
+      "id": 41,
+      "timestamp": "2026-06-18T19:22:37",
+      "date": "2026-06-18",
+      "analyst": "qonitahanifa",
+      "title": "Drop chrX from PCA vcf",
+      "tool": "bcftools",
+      "output_dir": "/Users/qonitahanifa/WGS_anoa /filtered",
+      "status": "completed",
+      "notes": "",
+      "tags": [
+        "PCA",
+        "Paper_1"
+      ],
+      "project": "anoa_wgs",
+      "sample_ids": [],
+      "organism": "BDBQ",
+      "tool_version": "",
+      "script": "",
+      "command": "bcftools view -t ^NC_037357.1 filtered_snps.vcf.gz \\\n    -Oz -o pca_autosomes.vcf.gz\nbcftools index pca_autosomes.vcf.gz",
+      "job_id": "",
+      "cluster": "",
+      "cpus": "",
+      "mem": "",
+      "walltime": "",
+      "input_files": "/Users/qonitahanifa/WGS_anoa /filtered/filtered_snps.vcf.gz",
+      "ref_genome": "batu9",
+      "results": ""
     }
   ],
   "todos": [
